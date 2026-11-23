@@ -2,6 +2,9 @@
 // Los paquetes (precios, itinerarios, servicios) vienen de data.js, relevado de kravatatravel.com.
 
 window.KRAVATA = {
+  // preview: muestra el aviso de fotos provisorias. rutasFijas: cada paquete en paquetes/<slug>.html (la web real).
+  sitio: { preview: true, rutasFijas: false },
+
   contacto: {
     whatsapp: '5492214406602',
     whatsappVisible: '221 440 6602',
@@ -32,8 +35,8 @@ window.KRAVATA = {
   },
 
   regiones: [
-    { id: 'argentina', nombre: 'Argentina', bajada: 'Semana Santa con vuelo y la Patagonia en verano.', foto: ['fitz-roy', 'Cerro Fitz Roy, Patagonia'],
-      slugs: ['parque-patagonia', 'salta-en-semana-santa', 'mendoza-en-semana-santa', 'iguazu-en-semana-santa'] },
+    { id: 'argentina', nombre: 'Argentina', bajada: 'Semana Santa con vuelo, la Patagonia en verano y Bariloche en invierno.', foto: ['fitz-roy', 'Cerro Fitz Roy, Patagonia'],
+      slugs: ['parque-patagonia', 'escapada-a-salta-en-semana-santa', 'escapada-a-mendoza', 'escapada-a-iguazu-en-semana-santa', 'buenos-aires-8-noches-con-visitas-guiadas', 'bariloche-en-invierno-tours-y-aventura'] },
     { id: 'croacia', nombre: 'Croacia y Balcanes', bajada: 'Circuitos terrestres, sin vuelo: el aéreo lo cotizamos aparte, a tu medida.', foto: ['dubrovnik-atardecer', 'Dubrovnik al anochecer'],
       nota: { titulo: 'Croacia es terrestre', lineas: ['Los circuitos no incluyen el vuelo.', 'El aéreo lo cotizamos aparte, según tu fecha y desde dónde salís.', 'Con guía de habla hispana: el detalle de cada uno está en su ficha.'] },
       slugs: ['maravillas-de-croacia', 'descubra-croacia', 'capitales-de-los-balcanes-con-dubrovnik-y-zagreb', 'lo-mejor-de-croacia-eslovenia-y-bosnia', 'perlas-balcanicas', 'conozca-italia-y-croacia'] },
@@ -46,9 +49,11 @@ window.KRAVATA = {
   // Fotos provisorias de Unsplash (ver img/FUENTES.md). La primera es la de la tarjeta.
   fotos: {
     'parque-patagonia': [['fitz-roy', 'Cerro Fitz Roy, Patagonia'], ['perito-moreno', 'Glaciar Perito Moreno'], ['fitz-roy-atardecer', 'Fitz Roy al atardecer']],
-    'salta-en-semana-santa': [['salta-quebrada', 'Quebrada de las Conchas, Salta'], ['salta-roca', 'Formaciones rojizas camino a Cafayate']],
-    'mendoza-en-semana-santa': [['mendoza-aconcagua', 'Cerro Aconcagua, Mendoza'], ['mendoza-bodega', 'Barricas en una bodega']],
-    'iguazu-en-semana-santa': [['iguazu', 'Cataratas del Iguazú'], ['iguazu-selva', 'Saltos entre la selva misionera']],
+    'escapada-a-salta-en-semana-santa': [['salta-quebrada', 'Quebrada de las Conchas, Salta'], ['salta-roca', 'Formaciones rojizas camino a Cafayate']],
+    'escapada-a-mendoza': [['mendoza-aconcagua', 'Cerro Aconcagua, Mendoza'], ['mendoza-bodega', 'Barricas en una bodega']],
+    'escapada-a-iguazu-en-semana-santa': [['iguazu', 'Cataratas del Iguazú'], ['iguazu-selva', 'Saltos entre la selva misionera']],
+    'buenos-aires-8-noches-con-visitas-guiadas': [['buenos-aires-caminito', 'Caminito, La Boca, Buenos Aires'], ['buenos-aires-obelisco', 'El Obelisco y la avenida 9 de Julio']],
+    'bariloche-en-invierno-tours-y-aventura': [['bariloche-llao-llao', 'Hotel Llao Llao y el cerro López nevado, Bariloche'], ['bariloche-lagos', 'Lagos del Circuito Chico, Bariloche']],
     'maravillas-de-croacia': [['plitvice', 'Lagos de Plitvice'], ['split-riva', 'La Riva de Split'], ['dubrovnik-lovrijenac', 'Fuerte Lovrijenac, Dubrovnik']],
     'descubra-croacia': [['split', 'Puerto de Split'], ['dubrovnik', 'Dubrovnik desde el aire'], ['plitvice', 'Lagos de Plitvice']],
     'capitales-de-los-balcanes-con-dubrovnik-y-zagreb': [['dubrovnik-atardecer', 'Dubrovnik al anochecer'], ['mostar', 'Puente Viejo de Mostar'], ['dubrovnik', 'Dubrovnik desde el aire']],

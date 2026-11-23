@@ -2,8 +2,15 @@
 (function () {
   const K = window.KRAVATA;
   const SVG = window.KRAVATA_SVG;
-  const PAQ = window.KRAVATA_PAQUETES;
+  // los paquetes vencidos (data-vence en la web actual) salen de los listados, pero su ficha sigue abierta
+  const TODOS = window.KRAVATA_PAQUETES;
+  const hoyISO = new Date().toISOString().slice(0, 10);
+  const PAQ = TODOS.filter(p => !p.vence || p.vence >= hoyISO);
   const porSlug = Object.fromEntries(PAQ.map(p => [p.slug, p]));
+  const porSlugTodos = Object.fromEntries(TODOS.map(p => [p.slug, p]));
+  const SITIO = window.KRAVATA.sitio || { preview: true, rutasFijas: false };
+  // en la web real cada paquete tiene su página fija (paquetes/<slug>.html); en la preview, paquete.html?p=<slug>
+  const urlPaq = s => SITIO.rutasFijas ? `paquetes/${s}.html` : `paquete.html?p=${s}`;
   const C = K.contacto;
 
   // ---------- íconos (trazos simples, sin avión, globo, pin ni valija) ----------
@@ -43,7 +50,7 @@
     ['destinos.html', 'Destinos', 'destinos'],
     ['destinos.html#promos', 'Promos', ''],
     ['index.html#como-funciona', 'Cómo funciona', ''],
-    ['presupuesto.html#nosotros', 'Nosotros', ''],
+    ['nosotros.html', 'Nosotros', 'nosotros'],
     ['presupuesto.html', 'Presupuesto', 'presupuesto']
   ];
   const cab = document.createElement('header');
@@ -60,7 +67,7 @@
   panel.innerHTML = enlaces.map(([h, t], n) => `<a href="${h}" style="--i:${n}">${t}</a>`).join('') +
     `<a class="btn btn--ancho" href="${wa('Hola, quiero consultar por un viaje.')}" target="_blank" rel="noopener">${I.wa}Escribinos por WhatsApp</a>`;
   const saltar = document.createElement('a');
-  saltar.className = 'saltar'; saltar.href = '#contenido'; saltar.textContent = 'Saltar al contenido';
+  saltar.className = 'saltar'; saltar.href = location.href.split('#')[0] + '#contenido'; saltar.textContent = 'Saltar al contenido';
   document.body.prepend(saltar, cab, panel);
   const ham = cab.querySelector('.hamburguesa');
   ham.addEventListener('click', () => {
@@ -93,7 +100,7 @@
           </div>
         </div>
         <div><h2>Destinos</h2><ul>${K.regiones.map(r => `<li><a href="destinos.html#${r.id}">${r.nombre}</a></li>`).join('')}<li><a href="presupuesto.html">A medida</a></li></ul></div>
-        <div><h2>Kravata</h2><ul><li><a href="index.html#como-funciona">Cómo funciona</a></li><li><a href="presupuesto.html#nosotros">Nosotros</a></li><li><a href="${C.terminos}">Términos y condiciones</a></li><li><a href="${C.defensaConsumidor}" target="_blank" rel="noopener">Defensa del Consumidor</a></li></ul></div>
+        <div><h2>Kravata</h2><ul><li><a href="index.html#como-funciona">Cómo funciona</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="guia-croacia.html">Guía de Croacia</a></li><li><a href="${C.terminos}">Términos y condiciones</a></li><li><a href="${C.defensaConsumidor}" target="_blank" rel="noopener">Defensa del Consumidor</a></li></ul></div>
         <div><h2>Contacto</h2><ul>
           <li><a href="${wa('Hola, quiero consultar por un viaje.')}" target="_blank" rel="noopener">WhatsApp ${C.whatsappVisible}</a></li>
           <li><a href="mailto:${C.mail}">${C.mail}</a></li>
@@ -103,7 +110,7 @@
         <div>
           <p>Kravata Travel · ${C.titular} · CUIT ${C.cuit} · ${C.domicilio}</p>
           <p>Defensa del Consumidor: <a href="${C.defensaConsumidor}" target="_blank" rel="noopener">para reclamos ingresá acá</a> · Línea gratuita 0800-666-1518 · Precios por persona, sujetos a disponibilidad.</p>
-          <p>Preview de diseño. Fotos provisorias de Unsplash.</p>
+          ${SITIO.preview ? '<p>Preview de diseño. Fotos provisorias de Unsplash.</p>' : ''}
         </div>
         <a class="btn-arrepentimiento" href="${C.arrepentimiento}">Botón de arrepentimiento</a>
       </div>
@@ -150,7 +157,7 @@
         <img src="img/chicas/${f[0]}.jpg" alt="${esc(f[1])}" loading="lazy" width="800" height="600">
       </div>
       <div class="tarjeta__cuerpo">
-        <h3><a href="paquete.html?p=${p.slug}">${esc(p.titulo)}</a></h3>
+        <h3><a href="${urlPaq(p.slug)}">${esc(p.titulo)}</a></h3>
         <p class="tarjeta__dias">${esc(p.etiqueta)} · ${esc(diasCorto(p))}</p>
         ${incluyeHTML(p)}
         <p class="tarjeta__dato"><b>${et}:</b> ${esc(dato)}</p>
@@ -358,6 +365,12 @@
       const items = m[1].split(/, | y /).map(x => ({ valor: `${x} de ${m[2]}`, texto: may(x) }));
       return { tipo: 'lista', opciones: [{ grupo: `Salidas ${m[2]}`, items }], porDefecto: items[0].valor };
     }
+    m = v.match(/en el mes cotizado \((\w+) de (\d{4})\)/);
+    if (m) {
+      const cot = (p.datos.find(x => /salida/i.test(x.k)) || {}).v || '';
+      return { tipo: 'lista', opciones: [{ grupo: 'Tarifa cotizada', items: [{ valor: `${m[1]} de ${m[2]}`, texto: `${may(m[1])} de ${m[2]}`, nota: cot ? `salida ${cot}` : '' }] },
+        { grupo: '', items: [{ valor: 'Otra fecha, a consultar', texto: 'Otra fecha, a consultar' }] }], porDefecto: `${m[1]} de ${m[2]}` };
+    }
     m = v.match(/desde (\w+) (\d{4}) hasta (\w+) (\d{4})/);
     if (m) {
       const hoy = new Date(), sig = new Date(hoy.getFullYear(), hoy.getMonth() + 1, 1);
@@ -504,15 +517,16 @@
   const adonde = () => {
     const ul = document.getElementById('adonde-lista'); if (!ul) return;
     const L = [
-      ['Patagonia', 'parque-patagonia', 'fitz-roy', 'perito-moreno'], ['Salta', 'salta-en-semana-santa', 'salta-quebrada', 'salta-roca'],
-      ['Mendoza', 'mendoza-en-semana-santa', 'mendoza-aconcagua', 'mendoza-bodega'], ['Iguazú', 'iguazu-en-semana-santa', 'iguazu', 'iguazu-selva'],
+      ['Patagonia', 'parque-patagonia', 'fitz-roy', 'perito-moreno'], ['Salta', 'escapada-a-salta-en-semana-santa', 'salta-quebrada', 'salta-roca'],
+      ['Mendoza', 'escapada-a-mendoza', 'mendoza-aconcagua', 'mendoza-bodega'], ['Iguazú', 'escapada-a-iguazu-en-semana-santa', 'iguazu', 'iguazu-selva'],
+      ['Bariloche', 'bariloche-en-invierno-tours-y-aventura', 'bariloche-llao-llao', 'bariloche-lagos'], ['Buenos Aires', 'buenos-aires-8-noches-con-visitas-guiadas', 'buenos-aires-caminito', 'buenos-aires-obelisco'],
       ['Plitvice', 'maravillas-de-croacia', 'plitvice', 'split-riva'], ['Dubrovnik', 'capitales-de-los-balcanes-con-dubrovnik-y-zagreb', 'dubrovnik', 'dubrovnik-atardecer'],
       ['Mostar', 'perlas-balcanicas', 'mostar', 'dubrovnik-lovrijenac'], ['Lago Bled', 'lo-mejor-de-croacia-eslovenia-y-bosnia', 'bled', 'plitvice'],
       ['Río de Janeiro', 'rio-de-janeiro-express', 'rio', 'rio-playa'], ['Maceió', 'maceio-pratagy-all-inclusive', 'maceio', ''],
       ['Venecia y Florencia', 'italia-clasica-roma-florencia-y-venecia', 'venecia', 'florencia'], ['París', 'europa-contigo', 'paris', 'lucerna'],
       ['Londres y Cornualles', 'leyendas-del-rey-arturo', 'londres', 'cornualles']
     ].filter(x => porSlug[x[1]]);
-    ul.innerHTML = L.map(([n, s, a, b]) => `<li><a href="paquete.html?p=${s}" data-a="${a}" data-b="${b}">${esc(n)}<small>${esc(porSlug[s].titulo)} · desde USD ${precioNum(porSlug[s])}</small></a></li>`).join('');
+    ul.innerHTML = L.map(([n, s, a, b]) => `<li><a href="${urlPaq(s)}" data-a="${a}" data-b="${b}">${esc(n)}<small>${esc(porSlug[s].titulo)} · desde USD ${precioNum(porSlug[s])}</small></a></li>`).join('');
     const sec = ul.closest('.adonde'), fi = sec.querySelector('.adonde__foto--izq'), fd = sec.querySelector('.adonde__foto--der');
     const mostrarFotos = a => {
       const y = a.getBoundingClientRect().top - sec.getBoundingClientRect().top + a.offsetHeight / 2;
@@ -625,12 +639,20 @@
         const b = e.target.closest('.chip'); if (!b) return;
         actual = b.dataset.r; history.replaceState(null, '', '#' + actual); pintar();
       });
+      // los enlaces del menú («Promos», regiones del pie) cambian solo el # estando ya en Destinos
+      addEventListener('hashchange', () => {
+        const r = (location.hash || '#todos').slice(1);
+        if (!chips.querySelector(`[data-r="${CSS.escape(r)}"]`)) return;
+        actual = r; pintar();
+        chips.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      if (!chips.querySelector(`[data-r="${CSS.escape(actual)}"]`)) actual = 'todos';
       pintar();
     },
 
     paquete() {
-      const slug = new URLSearchParams(location.search).get('p') || 'rio-de-janeiro-express';
-      const p = porSlug[slug];
+      const slug = window.KRAVATA_SLUG || new URLSearchParams(location.search).get('p') || 'rio-de-janeiro-express';
+      const p = porSlugTodos[slug];
       if (!p) { document.getElementById('ficha').innerHTML = '<p class="vacio">No encontramos ese viaje. <a class="link" href="destinos.html">Ver todos los destinos</a></p>'; return; }
       document.title = `${p.titulo} · Kravata Travel`;
       const r = region(slug);
@@ -692,7 +714,7 @@
 
     arrepentimiento() {
       const form = document.getElementById('form-arrepentimiento');
-      const paquetes = ['Parque Patagonia', 'Salta en Semana Santa', 'Escapada a Mendoza', 'Iguazú en Semana Santa', 'Buenos Aires: 8 noches con visitas guiadas', 'Bariloche en invierno: tours y aventura', 'Maravillas de Croacia', 'Descubra Croacia', 'Capitales de los Balcanes con Dubrovnik y Zagreb', 'Lo Mejor de Croacia, Eslovenia y Bosnia', 'Perlas Balcánicas', 'Conozca Italia y Croacia', 'Maceió, Pratagy All Inclusive', 'Río de Janeiro Express', 'Barcelona, Costa Azul y Roma', 'Europa Contigo', 'Italia Clásica: Roma, Florencia y Venecia', 'Madrid, Lourdes y París', 'Madrid y Londres', 'Leyendas del Rey Arturo', 'Otro (lo detallo abajo)'];
+      const paquetes = [...TODOS.map(p => p.titulo), 'Otro (lo detallo abajo)'];
       selector(form.querySelector('[data-campo=paquete]'), { name: 'paquete', etiqueta: 'Paquete contratado *', vacio: 'Elegí un paquete', opciones: [{ grupo: '', items: paquetes.map(t => ({ valor: t, texto: t })) }] });
       const err = document.getElementById('a-err'), ok = document.getElementById('a-ok');
       form.addEventListener('submit', e => {
@@ -719,6 +741,13 @@
         cp.onclick = () => { try { navigator.clipboard.writeText(body).then(() => { cp.textContent = 'Copiado'; }); } catch (x) {} };
         ok.hidden = false; ok.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
+    },
+
+    guia() {
+      const r = K.regiones.find(x => x.id === 'croacia');
+      document.getElementById('guia-paquetes').innerHTML = (r ? r.slugs : []).map(s => porSlug[s] && tarjeta(porSlug[s])).join('');
+      document.getElementById('guia-wa').href = wa('Hola, quiero armar un viaje a Croacia.');
+      document.getElementById('guia-wa').insertAdjacentHTML('afterbegin', I.wa);
     },
 
     presupuesto() {

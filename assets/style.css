@@ -652,6 +652,22 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; }
 .sel__opcion small:empty { display: none; }
 .caja-precio__otro { display: inline-flex; margin-top: 12px; font-size: 15px; }
 
+/* páginas de texto: Sobre nosotros y Guía de Croacia */
+.texto-largo { max-width: 820px; }
+.texto-largo__cuerpo { margin-top: 20px; font-size: 17px; line-height: 1.65; }
+.texto-largo__cuerpo > * + * { margin-top: 14px; }
+.texto-largo__cuerpo h2 { font-size: 24px; line-height: 1.2; margin-top: 40px; }
+.texto-largo__cuerpo ul { padding-left: 20px; }
+.texto-largo__cuerpo li + li { margin-top: 8px; }
+.texto-largo__cuerpo a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.datos--legal { margin: 40px 0 96px; }
+.datos--legal dt { font-size: 13px; color: var(--tinta-2); }
+.guia-cta { margin-top: 28px; }
+.texto-largo__pie { padding: 40px 0 96px; }
+.texto-largo__pie .fuentes { margin-top: 14px; font-size: 14px; color: var(--tinta-2); }
+.texto-largo__pie .fuentes a { color: inherit; }
+@media (max-width: 640px) { .datos--legal { grid-template-columns: 1fr; } }
+
 /* solo en la copia publicada para mostrar: aviso de versión de prueba */
 .aviso-prueba { position: fixed; left: 12px; bottom: 12px; z-index: 70; margin: 0; padding: 7px 12px; border-radius: 999px; background: rgba(18,35,61,.88); color: var(--crema); font-size: 12px; font-weight: 600; pointer-events: none; }
 @media (max-width: 920px) { .aviso-prueba { bottom: auto; top: 70px; left: 50%; translate: -50% 0; white-space: nowrap; } }

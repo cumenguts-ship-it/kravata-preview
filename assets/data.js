@@ -1,12 +1,265 @@
-// Datos reales de kravatatravel.com, relevados el 23 de noviembre de 2026.
+// Datos reales de kravatatravel.com, relevados el 2026-11-23.
 // Se regeneran con scrape.py; no editar a mano.
 window.KRAVATA_PAQUETES = [
+ {
+  "slug": "escapada-a-salta-en-semana-santa",
+  "seccion": "argentina-croacia",
+  "destacado": true,
+  "vence": "2027-03-22",
+  "etiqueta": "Salta",
+  "mini": "Salida 25 mar 2027",
+  "titulo": "Escapada a Salta en Semana Santa",
+  "dest": "Destino: Salta · 4 días · 3 noches",
+  "badges": [
+   {
+    "si": true,
+    "t": "Vuelo incluido"
+   },
+   {
+    "si": true,
+    "t": "Incluye seguro de viaje"
+   }
+  ],
+  "fotosOriginales": [
+   "Calle peatonal del centro de Salta con fachadas coloniales y el cerro al fondo",
+   "Ruta entre formaciones de roca rojiza en el norte argentino",
+   "Cerros de colores en la Quebrada de Humahuaca, Jujuy"
+  ],
+  "descripcion": "Cuatro días y tres noches en Salta durante Semana Santa. Incluye vuelo ida y vuelta desde Buenos Aires con JetSMART, traslados, alojamiento con desayuno y city tour de Salta.",
+  "datos": [
+   {
+    "k": "Duración",
+    "v": "4 días · 3 noches"
+   },
+   {
+    "k": "Salida cotizada",
+    "v": "25 mar 2027"
+   },
+   {
+    "k": "Vuelo",
+    "v": "Incluido (desde Buenos Aires)"
+   },
+   {
+    "k": "Seguro de viaje",
+    "v": "Incluido"
+   },
+   {
+    "k": "Ocupación",
+    "v": "Base doble (cotización para 2 adultos)"
+   }
+  ],
+  "actividades": [],
+  "incluye": [
+   "Vuelo ida y vuelta desde Buenos Aires con JetSMART (incluye bolso de mano y carry on de 10 kg en cabina)",
+   "Traslados de entrada y salida",
+   "3 noches de alojamiento con desayuno",
+   "City tour de Salta",
+   "Asistencia al viajero Universal Assistance, hasta los 70 años"
+  ],
+  "noIncluye": [
+   "Almuerzos y cenas: no incluidos",
+   "Excursiones opcionales: no incluidas"
+  ],
+  "itinerario": [],
+  "itinerarioNota": "Este paquete no tiene un programa día por día: incluye el vuelo, los traslados, 3 noches de alojamiento con desayuno y city tour de Salta. El resto de las actividades en destino son libres.",
+  "precio": "Desde USD 650",
+  "precioModo": [
+   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 25 mar 2027.",
+   "Vigencia de la tarifa: válida para la salida del 25 al 28 de marzo de 2027. El precio puede cambiar hasta confirmar la reserva."
+  ],
+  "precioImpuestos": [
+   "Altos de Balcarce (3★, hab. Standard): USD 650 por persona, base doble",
+   "Amerian Salta (3★, hab. Standard): USD 717 por persona, base doble"
+  ],
+  "precioAviso": "No es un total final: consultanos el valor con impuestos antes de reservar.",
+  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Escapada%20a%20Salta%20en%20Semana%20Santa%20%28desde%20USD%20650%2C%20salida%2025%20mar%202027%29.",
+  "notas": [
+   "Salida única del 25 al 28 de marzo de 2027, con cupos confirmados y limitados, sujetos a disponibilidad al reservar.",
+   "Vuelos previstos: ida 25 de marzo, Aeroparque – Salta, 05:20 a 07:34; vuelta 28 de marzo, Salta – Ezeiza, 22:37 a 00:44 (+1)",
+   "Las tarifas se calcularon para un grupo de 10 personas; las visitas y excursiones son servicios regulares compartidos.",
+   "La asistencia al viajero (Universal Assistance, plan National Plus) es válida hasta los 70 años. Para mayores hay un suplemento: consultanos.",
+   "La tarifa puede variar si cambia el tipo de cambio.",
+   "Las fotos son ilustrativas del norte argentino: algunos lugares que se ven no forman parte de este paquete."
+  ],
+  "condiciones": "Precio sujeto a disponibilidad y a la fecha de salida indicada. Las condiciones de reserva, pago, cambios y cancelación están en los términos y condiciones . Antes de pagar te enviamos el detalle completo de tu viaje."
+ },
+ {
+  "slug": "escapada-a-mendoza",
+  "seccion": "argentina-croacia",
+  "destacado": true,
+  "vence": "2027-03-22",
+  "etiqueta": "Mendoza",
+  "mini": "Salida 25 mar 2027",
+  "titulo": "Escapada a Mendoza",
+  "dest": "Destino: Mendoza · 4 días · 3 noches",
+  "badges": [
+   {
+    "si": true,
+    "t": "Vuelo incluido"
+   },
+   {
+    "si": true,
+    "t": "Incluye seguro de viaje"
+   }
+  ],
+  "fotosOriginales": [
+   "Bodega entre viñedos con la cordillera de los Andes nevada al fondo, Mendoza",
+   "Ruta de montaña entre formaciones rojizas, Mendoza",
+   "Racimos de uvas en un viñedo de Mendoza"
+  ],
+  "descripcion": "Cuatro días y tres noches en Mendoza durante Semana Santa. Incluye vuelo ida y vuelta desde Buenos Aires con JetSMART, traslados, alojamiento con desayuno y excursión a Potrerillos con Cacheuta.",
+  "datos": [
+   {
+    "k": "Duración",
+    "v": "4 días · 3 noches"
+   },
+   {
+    "k": "Salida cotizada",
+    "v": "25 mar 2027"
+   },
+   {
+    "k": "Vuelo",
+    "v": "Incluido (desde Buenos Aires)"
+   },
+   {
+    "k": "Seguro de viaje",
+    "v": "Incluido"
+   },
+   {
+    "k": "Ocupación",
+    "v": "Base doble (cotización para 2 adultos)"
+   }
+  ],
+  "actividades": [],
+  "incluye": [
+   "Vuelo ida y vuelta desde Buenos Aires con JetSMART (incluye bolso de mano y equipaje en bodega)",
+   "Traslados de entrada y salida",
+   "3 noches de alojamiento con desayuno",
+   "Excursión a Potrerillos con Cacheuta",
+   "Asistencia al viajero Universal Assistance, hasta los 70 años"
+  ],
+  "noIncluye": [
+   "Almuerzos y cenas: no incluidos",
+   "Otras excursiones: no incluidas"
+  ],
+  "itinerario": [],
+  "itinerarioNota": "Este paquete no tiene un programa día por día: incluye el vuelo, los traslados, 3 noches de alojamiento con desayuno y excursión a Potrerillos con Cacheuta. El resto de las actividades en destino son libres.",
+  "precio": "Desde USD 643",
+  "precioModo": [
+   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 25 mar 2027.",
+   "Vigencia de la tarifa: válida para la salida del 25 al 28 de marzo de 2027. El precio puede cambiar hasta confirmar la reserva."
+  ],
+  "precioImpuestos": [
+   "Hotel Provincial (3★, hab. Standard): USD 643 por persona, base doble",
+   "Hotel Princess (3★, late check out incluido): USD 740 por persona, base doble",
+   "Royal Princess Gold (4★, late check out incluido): USD 843 por persona, base doble",
+   "Huentala (4★, hab. Clásica): USD 847 por persona, base doble",
+   "Sheraton (5★, hab. Clásica): USD 905 por persona, base doble"
+  ],
+  "precioAviso": "No es un total final: consultanos el valor con impuestos antes de reservar.",
+  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Escapada%20a%20Mendoza%20%28desde%20USD%20643%2C%20salida%2025%20mar%202027%29.",
+  "notas": [
+   "Salida única del 25 al 28 de marzo de 2027, con cupos confirmados y limitados, sujetos a disponibilidad al reservar.",
+   "Vuelos previstos: ida 25 de marzo, Ezeiza – Mendoza, 13:43 a 15:38; vuelta 28 de marzo, Mendoza – Aeroparque, 23:21 a 01:02 (+1)",
+   "Las tarifas se calcularon para un grupo de 10 personas; las visitas y excursiones son servicios regulares compartidos.",
+   "La asistencia al viajero (Universal Assistance, plan National Plus) es válida hasta los 70 años. Para mayores hay un suplemento: consultanos.",
+   "La tarifa puede variar si cambia el tipo de cambio.",
+   "Las fotos son ilustrativas de Mendoza: algunos lugares que se ven no forman parte de este paquete."
+  ],
+  "condiciones": "Precio sujeto a disponibilidad y a la fecha de salida indicada. Las condiciones de reserva, pago, cambios y cancelación están en los términos y condiciones . Antes de pagar te enviamos el detalle completo de tu viaje."
+ },
+ {
+  "slug": "escapada-a-iguazu-en-semana-santa",
+  "seccion": "argentina-croacia",
+  "destacado": false,
+  "vence": "2027-03-22",
+  "etiqueta": "Iguazú",
+  "mini": "Salida 25 mar 2027",
+  "titulo": "Escapada a Iguazú en Semana Santa",
+  "dest": "Destino: Iguazú · 4 días · 3 noches",
+  "badges": [
+   {
+    "si": true,
+    "t": "Vuelo incluido"
+   },
+   {
+    "si": true,
+    "t": "Incluye seguro de viaje"
+   }
+  ],
+  "fotosOriginales": [
+   "Vista panorámica de las Cataratas del Iguazú rodeadas de selva",
+   "Cataratas del Iguazú bajo un cielo azul",
+   "Saltos de las Cataratas del Iguazú entre la selva, con un mirador al fondo"
+  ],
+  "descripcion": "Cuatro días y tres noches en Iguazú durante Semana Santa. Incluye vuelo ida y vuelta desde Buenos Aires con JetSMART, traslados, alojamiento con desayuno y excursión a las Cataratas Argentinas (sin ingreso al Parque Nacional).",
+  "datos": [
+   {
+    "k": "Duración",
+    "v": "4 días · 3 noches"
+   },
+   {
+    "k": "Salida cotizada",
+    "v": "25 mar 2027"
+   },
+   {
+    "k": "Vuelo",
+    "v": "Incluido (desde Buenos Aires)"
+   },
+   {
+    "k": "Seguro de viaje",
+    "v": "Incluido"
+   },
+   {
+    "k": "Ocupación",
+    "v": "Base doble (cotización para 2 adultos)"
+   }
+  ],
+  "actividades": [],
+  "incluye": [
+   "Vuelo ida y vuelta desde Buenos Aires con JetSMART (incluye bolso de mano y carry on de 10 kg en cabina)",
+   "Traslados de entrada y salida",
+   "3 noches de alojamiento con desayuno",
+   "Excursión a las Cataratas Argentinas (sin ingreso al Parque Nacional)",
+   "Asistencia al viajero Universal Assistance, hasta los 70 años"
+  ],
+  "noIncluye": [
+   "Ingreso al Parque Nacional Iguazú",
+   "Ecotasa municipal de los hoteles de Iguazú",
+   "Almuerzos y cenas: no incluidos"
+  ],
+  "itinerario": [],
+  "itinerarioNota": "Este paquete no tiene un programa día por día: incluye el vuelo, los traslados, 3 noches de alojamiento con desayuno y excursión a las Cataratas Argentinas (sin ingreso al Parque Nacional). El resto de las actividades en destino son libres.",
+  "precio": "Desde USD 642",
+  "precioModo": [
+   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 25 mar 2027.",
+   "Vigencia de la tarifa: válida para la salida del 25 al 28 de marzo de 2027. El precio puede cambiar hasta confirmar la reserva."
+  ],
+  "precioImpuestos": [
+   "Complejo Turístico Americano (3★, hab. Superior): USD 655 por persona, base doble",
+   "Pirayú (3★, hab. Studio Junior): USD 642 por persona, base doble",
+   "Village Cataratas (4★, hab. Standard): USD 749 por persona, base doble"
+  ],
+  "precioAviso": "No es un total final: consultanos el valor con impuestos antes de reservar.",
+  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Escapada%20a%20Iguaz%C3%BA%20en%20Semana%20Santa%20%28desde%20USD%20642%2C%20salida%2025%20mar%202027%29.",
+  "notas": [
+   "Salida única del 25 al 28 de marzo de 2027, con cupos confirmados y limitados, sujetos a disponibilidad al reservar.",
+   "Vuelos previstos: ida 25 de marzo, Ezeiza – Iguazú, 07:30 a 09:23; vuelta 28 de marzo, Iguazú – Aeroparque, 13:21 a 15:22",
+   "Las tarifas se calcularon para un grupo de 10 personas; las visitas y excursiones son servicios regulares compartidos.",
+   "La asistencia al viajero (Universal Assistance, plan National Plus) es válida hasta los 70 años. Para mayores hay un suplemento: consultanos.",
+   "La tarifa puede variar si cambia el tipo de cambio.",
+   "Los hoteles de Iguazú cobran una ecotasa municipal que no está incluida en la tarifa.",
+   "Las fotos son ilustrativas de las Cataratas del Iguazú: no todos los sectores que se ven están incluidos en la excursión."
+  ],
+  "condiciones": "Precio sujeto a disponibilidad y a la fecha de salida indicada. Las condiciones de reserva, pago, cambios y cancelación están en los términos y condiciones . Antes de pagar te enviamos el detalle completo de tu viaje."
+ },
  {
   "slug": "parque-patagonia",
   "seccion": "argentina-croacia",
   "destacado": false,
+  "vence": "2027-03-17",
   "etiqueta": "Patagonia",
-  "mini": "Impuestos incluidos · salida 26 ene 2027",
+  "mini": "Salidas 26 ene, 11 feb, 26 feb y 20 mar 2027",
   "titulo": "Parque Patagonia",
   "dest": "Destino: Patagonia · 9 días · 8 noches",
   "badges": [
@@ -31,8 +284,8 @@ window.KRAVATA_PAQUETES = [
     "v": "9 días · 8 noches"
    },
    {
-    "k": "Salida cotizada",
-    "v": "26 ene 2027"
+    "k": "Salidas cotizadas",
+    "v": "26 ene, 11 feb, 26 feb y 20 mar 2027"
    },
    {
     "k": "Vuelo",
@@ -104,14 +357,14 @@ window.KRAVATA_PAQUETES = [
   "itinerarioNota": "",
   "precio": "Desde USD 2.898",
   "precioModo": [
-   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 26 ene 2027.",
+   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 26 ene, 11 feb, 26 feb y 20 mar 2027.",
    "Vigencia de la tarifa: válida para las salidas del 26 de enero, 11 de febrero, 26 de febrero y 20 de marzo de 2027. El precio puede cambiar hasta confirmar la reserva."
   ],
   "precioImpuestos": [
    "Precio con impuestos incluidos."
   ],
   "precioAviso": "No es un total final: consultanos el valor con impuestos antes de reservar.",
-  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Parque%20Patagonia%20%28desde%20USD%202898%2C%20salida%2026%20ene%202027%29.",
+  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Parque%20Patagonia%20%28desde%20USD%202898%2C%20salida%2026%20ene%2C%2011%20feb%2C%2026%20feb%20y%2020%20mar%202027%29.",
   "notas": [
    "Salidas grupales: 26 de enero al 3 de febrero, 11 al 19 de febrero, 26 de febrero al 6 de marzo y 20 al 28 de marzo de 2027.",
    "Tarifa base doble: compartís habitación con otro viajero, sujeto a disponibilidad. Si preferís habitación individual, la tarifa single es de USD 3.513 por persona.",
@@ -122,45 +375,46 @@ window.KRAVATA_PAQUETES = [
   "condiciones": "Precio sujeto a disponibilidad y a la fecha de salida indicada. Las condiciones de reserva, pago, cambios y cancelación están en los términos y condiciones . Antes de pagar te enviamos el detalle completo de tu viaje."
  },
  {
-  "slug": "salta-en-semana-santa",
+  "slug": "buenos-aires-8-noches-con-visitas-guiadas",
   "seccion": "argentina-croacia",
   "destacado": false,
-  "etiqueta": "Salta",
-  "mini": "Impuestos incluidos · salida 25 mar 2027",
-  "titulo": "Salta en Semana Santa",
-  "dest": "Destino: Salta · 4 días · 3 noches",
+  "vence": "2027-02-08",
+  "etiqueta": "Buenos Aires",
+  "mini": "Salida 11 feb 2027",
+  "titulo": "Buenos Aires: 8 noches con visitas guiadas",
+  "dest": "Destino: Buenos Aires · 9 días · 8 noches",
   "badges": [
    {
-    "si": true,
-    "t": "Vuelo incluido"
+    "si": false,
+    "t": "Vuelo no incluido"
    },
    {
-    "si": true,
-    "t": "Incluye seguro de viaje"
+    "si": false,
+    "t": "Seguro de viaje no incluido"
    }
   ],
   "fotosOriginales": [
-   "Calle peatonal del centro de Salta con fachadas coloniales y el cerro al fondo",
-   "Ruta entre formaciones de roca rojiza en el norte argentino",
-   "Cerros de colores en la Quebrada de Humahuaca, Jujuy"
+   "La Casa Rosada y la bandera argentina, Buenos Aires",
+   "Vista aérea del Obelisco y la avenida 9 de Julio, Buenos Aires",
+   "Casas de colores de Caminito, barrio de La Boca, Buenos Aires"
   ],
-  "descripcion": "Cuatro días y tres noches en Salta durante Semana Santa. Incluye vuelo ida y vuelta desde Buenos Aires con JetSMART, traslados, alojamiento con desayuno y city tour de Salta.",
+  "descripcion": "Nueve días y ocho noches en Buenos Aires, alojado en Mitre Suites, en el barrio de Almagro. Incluye traslados privados de llegada y de salida, y tres visitas con entradas o guía: la Casa de D10S (la casa donde vivió Maradona), un tour a pie por el barrio de Caballito y una visita guiada por el Museo Nacional de Bellas Artes. Los días sin actividades son libres para recorrer la ciudad a tu ritmo.",
   "datos": [
    {
     "k": "Duración",
-    "v": "4 días · 3 noches"
+    "v": "9 días · 8 noches"
    },
    {
     "k": "Salida cotizada",
-    "v": "25 mar 2027"
+    "v": "11 feb 2027"
    },
    {
     "k": "Vuelo",
-    "v": "Incluido (desde Buenos Aires)"
+    "v": "No incluido: paquete terrestre"
    },
    {
     "k": "Seguro de viaje",
-    "v": "Incluido"
+    "v": "No incluido"
    },
    {
     "k": "Ocupación",
@@ -169,204 +423,188 @@ window.KRAVATA_PAQUETES = [
   ],
   "actividades": [],
   "incluye": [
-   "Vuelo ida y vuelta desde Buenos Aires con JetSMART (incluye bolso de mano y carry on de 10 kg en cabina)",
-   "Traslados de entrada y salida",
-   "3 noches de alojamiento con desayuno",
-   "City tour de Salta",
-   "Asistencia al viajero Universal Assistance, hasta los 70 años"
+   "Traslado privado de llegada (aeropuerto – hotel) y de salida (hotel – aeropuerto)",
+   "8 noches de alojamiento en Mitre Suites, habitación doble superior, solo alojamiento",
+   "Entrada a la Casa de D10S (casa de Maradona)",
+   "Tour a pie por el barrio de Caballito, con guía en español",
+   "Visita guiada en español por el Museo Nacional de Bellas Artes"
   ],
   "noIncluye": [
-   "Almuerzos y cenas: no incluidos",
-   "Excursiones opcionales: no incluidas"
+   "Pasajes aéreos a Buenos Aires: no incluidos",
+   "Comidas y bebidas: no incluidas (el hotel es solo alojamiento)",
+   "Seguro de viaje: no incluido",
+   "Propinas y gastos personales: no incluidos"
   ],
-  "itinerario": [],
-  "itinerarioNota": "Este paquete no tiene un programa día por día: incluye el vuelo, los traslados, 3 noches de alojamiento con desayuno y city tour de Salta. El resto de las actividades en destino son libres.",
+  "itinerario": [
+   {
+    "d": "Día 1 · Llegada a Buenos Aires",
+    "t": "Jueves 11 de febrero. Traslado privado del aeropuerto al hotel Mitre Suites, en Almagro. Resto del día libre."
+   },
+   {
+    "d": "Día 2 · Día libre",
+    "t": "Viernes 12 de febrero. Sin actividades programadas."
+   },
+   {
+    "d": "Día 3 · Casa de D10S",
+    "t": "Sábado 13 de febrero. Entrada a la casa-museo de La Paternal donde Diego Maradona vivió con su familia entre 1978 y 1980."
+   },
+   {
+    "d": "Día 4 · Día libre",
+    "t": "Domingo 14 de febrero. Sin actividades programadas."
+   },
+   {
+    "d": "Día 5 · Día libre",
+    "t": "Lunes 15 de febrero. Sin actividades programadas."
+   },
+   {
+    "d": "Día 6 · Tour por el barrio de Caballito",
+    "t": "Martes 16 de febrero, a las 9:00. Recorrido a pie con guía en español por el Parque Centenario, el Parque Rivadavia y el Barrio Inglés. Dura unas 3 horas."
+   },
+   {
+    "d": "Día 7 · Museo Nacional de Bellas Artes",
+    "t": "Miércoles 17 de febrero, a las 11:30. Visita guiada en español por la colección permanente, con obras de artistas argentinos y europeos. Dura cerca de una hora."
+   },
+   {
+    "d": "Día 8 · Día libre",
+    "t": "Jueves 18 de febrero. Sin actividades programadas."
+   },
+   {
+    "d": "Día 9 · Salida de Buenos Aires",
+    "t": "Viernes 19 de febrero. Traslado privado del hotel al aeropuerto. Fin de los servicios."
+   }
+  ],
+  "itinerarioNota": "",
+  "precio": "Desde USD 300",
+  "precioModo": [
+   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 11 feb 2027.",
+   "Vigencia de la tarifa: válida solo para viajar en el mes cotizado (febrero de 2027) o con salida un día antes de la fecha cotizada (10 de febrero de 2027). El precio puede cambiar hasta confirmar la reserva."
+  ],
+  "precioImpuestos": [
+   "Mitre Suites (hab. doble superior): USD 300 por persona, base doble"
+  ],
+  "precioAviso": "No es un total final: consultanos el valor con impuestos antes de reservar.",
+  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Buenos%20Aires%3A%208%20noches%20con%20visitas%20guiadas%20%28desde%20USD%20300%2C%20salida%2011%20feb%202027%29.",
+  "notas": [
+   "Cotización para 2 adultos, con ingreso el 11 de febrero y salida el 19 de febrero de 2027.",
+   "Válido solo para viajar en el mes cotizado (febrero de 2027) o con salida un día antes de la fecha cotizada.",
+   "Los días sin actividades son días libres.",
+   "Los traslados privados admiten un máximo de 2 personas y 2 maletas.",
+   "La Casa de D10S abre de martes a sábado y está cerrada domingos y lunes; la visita está programada para el sábado 13 de febrero.",
+   "Las visitas son servicios regulares: los horarios los confirma cada proveedor.",
+   "Las fotos son ilustrativas."
+  ],
+  "condiciones": "Precio sujeto a disponibilidad y a la fecha de salida indicada. Las condiciones de reserva, pago, cambios y cancelación están en los términos y condiciones . Antes de pagar te enviamos el detalle completo de tu viaje."
+ },
+ {
+  "slug": "bariloche-en-invierno-tours-y-aventura",
+  "seccion": "argentina-croacia",
+  "destacado": false,
+  "vence": "2027-06-12",
+  "etiqueta": "Bariloche",
+  "mini": "Salida 15 jun 2027",
+  "titulo": "Bariloche en invierno: tours y aventura",
+  "dest": "Destino: Bariloche · 7 días · 6 noches",
+  "badges": [
+   {
+    "si": false,
+    "t": "Vuelo no incluido"
+   },
+   {
+    "si": false,
+    "t": "Seguro de viaje no incluido"
+   }
+  ],
+  "fotosOriginales": [
+   "Lago al atardecer con montañas nevadas, Bariloche",
+   "Cabaña de troncos cubierta de nieve y con hielo en el techo, Bariloche",
+   "Capilla de troncos y piedra con cielo azul, Bariloche"
+  ],
+  "descripcion": "Siete días y seis noches en San Carlos de Bariloche, alojado en el hotel Nevada, en el centro de la ciudad, con desayuno. Incluye un tour privado por la ciudad y los Balcones Panorámicos, kayak en el lago Gutiérrez y un recorrido en bicicleta por Colonia Suiza y Villa Los Coihues. Los días sin actividades son libres.",
+  "datos": [
+   {
+    "k": "Duración",
+    "v": "7 días · 6 noches"
+   },
+   {
+    "k": "Salida cotizada",
+    "v": "15 jun 2027"
+   },
+   {
+    "k": "Vuelo",
+    "v": "No incluido: paquete terrestre"
+   },
+   {
+    "k": "Seguro de viaje",
+    "v": "No incluido"
+   },
+   {
+    "k": "Ocupación",
+    "v": "Base doble (cotización para 2 adultos)"
+   }
+  ],
+  "actividades": [],
+  "incluye": [
+   "6 noches de alojamiento en el hotel Nevada, habitación doble standard, con desayuno",
+   "Tour privado por Bariloche y los Balcones Panorámicos, con guía en español y recogida en el hotel",
+   "Kayak en el lago Gutiérrez, con guía, equipo y café o té con alfajores",
+   "Recorrido en bicicleta por Colonia Suiza y Villa Los Coihues, con guía en español, bicicleta, casco, mate y facturas"
+  ],
+  "noIncluye": [
+   "Pasajes aéreos a Bariloche: no incluidos",
+   "Traslados del aeropuerto al hotel y de regreso: no incluidos",
+   "Traslado al kayak y a la bicicleta: no incluido (la recogida del kayak es opcional)",
+   "Almuerzos y cenas: no incluidos",
+   "Seguro de viaje: no incluido",
+   "Propinas y gastos personales: no incluidos"
+  ],
+  "itinerario": [
+   {
+    "d": "Día 1 · Llegada a Bariloche",
+    "t": "Martes 15 de junio. Llegada y alojamiento en el hotel Nevada, en el centro. Resto del día libre."
+   },
+   {
+    "d": "Día 2 · Día libre",
+    "t": "Miércoles 16 de junio. Sin actividades programadas."
+   },
+   {
+    "d": "Día 3 · Tour privado por Bariloche y los Balcones Panorámicos",
+    "t": "Jueves 17 de junio, por la mañana. Recorrido de 2 horas en vehículo con guía en español: la Catedral, el edificio de la Intendencia del Parque Nacional Nahuel Huapi y los miradores de los Balcones Panorámicos. Incluye la recogida en el hotel."
+   },
+   {
+    "d": "Día 4 · Kayak en el lago Gutiérrez",
+    "t": "Viernes 18 de junio, a las 9:30. Unas 2 horas de kayak con guía, equipo y una pausa con café o té y alfajores artesanales. El encuentro es en el Camping Lago Gutiérrez."
+   },
+   {
+    "d": "Día 5 · Día libre",
+    "t": "Sábado 19 de junio. Sin actividades programadas."
+   },
+   {
+    "d": "Día 6 · Bicicleta por Colonia Suiza y Villa Los Coihues",
+    "t": "Domingo 20 de junio, a las 9:00. Unas 4 horas en bicicleta con guía en español, por Villa Los Coihues, el río Casa de Piedra y Colonia Suiza. Incluye bicicleta, casco, mate y facturas."
+   },
+   {
+    "d": "Día 7 · Salida de Bariloche",
+    "t": "Lunes 21 de junio. Fin de los servicios."
+   }
+  ],
+  "itinerarioNota": "",
   "precio": "Desde USD 650",
   "precioModo": [
-   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 25 mar 2027.",
-   "Vigencia de la tarifa: válida para la salida del 25 al 28 de marzo de 2027. El precio puede cambiar hasta confirmar la reserva."
+   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 15 jun 2027.",
+   "Vigencia de la tarifa: válida solo para viajar en el mes cotizado (junio de 2027) o con salida un día antes de la fecha cotizada (14 de junio de 2027). El precio puede cambiar hasta confirmar la reserva."
   ],
   "precioImpuestos": [
-   "Altos de Balcarce (3★, hab. Standard): USD 650 por persona, base doble",
-   "Amerian Salta (3★, hab. Standard): USD 717 por persona, base doble"
+   "Hotel Nevada (hab. doble standard): USD 650 por persona, base doble"
   ],
   "precioAviso": "No es un total final: consultanos el valor con impuestos antes de reservar.",
-  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Salta%20en%20Semana%20Santa%20%28desde%20USD%20650%2C%20salida%2025%20mar%202027%29.",
+  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Bariloche%20en%20invierno%3A%20tours%20y%20aventura%20%28desde%20USD%20650%2C%20salida%2015%20jun%202027%29.",
   "notas": [
-   "Salida única del 25 al 28 de marzo de 2027, con cupos confirmados y limitados, sujetos a disponibilidad al reservar.",
-   "Vuelos previstos: ida 25 de marzo, Aeroparque – Salta, 05:20 a 07:34; vuelta 28 de marzo, Salta – Ezeiza, 22:37 a 00:44 (+1)",
-   "Las tarifas se calcularon para un grupo de 10 personas; las visitas y excursiones son servicios regulares compartidos.",
-   "La asistencia al viajero (Universal Assistance, plan National Plus) es válida hasta los 70 años. Para mayores hay un suplemento: consultanos.",
-   "La tarifa puede variar si cambia el tipo de cambio.",
-   "Las fotos son ilustrativas del norte argentino: algunos lugares que se ven no forman parte de este paquete."
-  ],
-  "condiciones": "Precio sujeto a disponibilidad y a la fecha de salida indicada. Las condiciones de reserva, pago, cambios y cancelación están en los términos y condiciones . Antes de pagar te enviamos el detalle completo de tu viaje."
- },
- {
-  "slug": "mendoza-en-semana-santa",
-  "seccion": "argentina-croacia",
-  "destacado": false,
-  "etiqueta": "Mendoza",
-  "mini": "Impuestos incluidos · salida 25 mar 2027",
-  "titulo": "Mendoza en Semana Santa",
-  "dest": "Destino: Mendoza · 4 días · 3 noches",
-  "badges": [
-   {
-    "si": true,
-    "t": "Vuelo incluido"
-   },
-   {
-    "si": true,
-    "t": "Incluye seguro de viaje"
-   }
-  ],
-  "fotosOriginales": [
-   "Bodega entre viñedos con la cordillera de los Andes nevada al fondo, Mendoza",
-   "Ruta de montaña entre formaciones rojizas, Mendoza",
-   "Racimos de uvas en un viñedo de Mendoza"
-  ],
-  "descripcion": "Cuatro días y tres noches en Mendoza durante Semana Santa. Incluye vuelo ida y vuelta desde Buenos Aires con JetSMART, traslados, alojamiento con desayuno y excursión a Potrerillos con Cacheuta.",
-  "datos": [
-   {
-    "k": "Duración",
-    "v": "4 días · 3 noches"
-   },
-   {
-    "k": "Salida cotizada",
-    "v": "25 mar 2027"
-   },
-   {
-    "k": "Vuelo",
-    "v": "Incluido (desde Buenos Aires)"
-   },
-   {
-    "k": "Seguro de viaje",
-    "v": "Incluido"
-   },
-   {
-    "k": "Ocupación",
-    "v": "Base doble (cotización para 2 adultos)"
-   }
-  ],
-  "actividades": [],
-  "incluye": [
-   "Vuelo ida y vuelta desde Buenos Aires con JetSMART (incluye bolso de mano y equipaje en bodega)",
-   "Traslados de entrada y salida",
-   "3 noches de alojamiento con desayuno",
-   "Excursión a Potrerillos con Cacheuta",
-   "Asistencia al viajero Universal Assistance, hasta los 70 años"
-  ],
-  "noIncluye": [
-   "Almuerzos y cenas: no incluidos",
-   "Otras excursiones: no incluidas"
-  ],
-  "itinerario": [],
-  "itinerarioNota": "Este paquete no tiene un programa día por día: incluye el vuelo, los traslados, 3 noches de alojamiento con desayuno y excursión a Potrerillos con Cacheuta. El resto de las actividades en destino son libres.",
-  "precio": "Desde USD 643",
-  "precioModo": [
-   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 25 mar 2027.",
-   "Vigencia de la tarifa: válida para la salida del 25 al 28 de marzo de 2027. El precio puede cambiar hasta confirmar la reserva."
-  ],
-  "precioImpuestos": [
-   "Hotel Provincial (3★, hab. Standard): USD 643 por persona, base doble",
-   "Hotel Princess (3★, late check out incluido): USD 740 por persona, base doble",
-   "Royal Princess Gold (4★, late check out incluido): USD 843 por persona, base doble",
-   "Huentala (4★, hab. Clásica): USD 847 por persona, base doble",
-   "Sheraton (5★, hab. Clásica): USD 905 por persona, base doble"
-  ],
-  "precioAviso": "No es un total final: consultanos el valor con impuestos antes de reservar.",
-  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Mendoza%20en%20Semana%20Santa%20%28desde%20USD%20643%2C%20salida%2025%20mar%202027%29.",
-  "notas": [
-   "Salida única del 25 al 28 de marzo de 2027, con cupos confirmados y limitados, sujetos a disponibilidad al reservar.",
-   "Vuelos previstos: ida 25 de marzo, Ezeiza – Mendoza, 13:43 a 15:38; vuelta 28 de marzo, Mendoza – Aeroparque, 23:21 a 01:02 (+1)",
-   "Las tarifas se calcularon para un grupo de 10 personas; las visitas y excursiones son servicios regulares compartidos.",
-   "La asistencia al viajero (Universal Assistance, plan National Plus) es válida hasta los 70 años. Para mayores hay un suplemento: consultanos.",
-   "La tarifa puede variar si cambia el tipo de cambio.",
-   "Las fotos son ilustrativas de Mendoza: algunos lugares que se ven no forman parte de este paquete."
-  ],
-  "condiciones": "Precio sujeto a disponibilidad y a la fecha de salida indicada. Las condiciones de reserva, pago, cambios y cancelación están en los términos y condiciones . Antes de pagar te enviamos el detalle completo de tu viaje."
- },
- {
-  "slug": "iguazu-en-semana-santa",
-  "seccion": "argentina-croacia",
-  "destacado": false,
-  "etiqueta": "Iguazú",
-  "mini": "Impuestos incluidos · salida 25 mar 2027",
-  "titulo": "Iguazú en Semana Santa",
-  "dest": "Destino: Iguazú · 4 días · 3 noches",
-  "badges": [
-   {
-    "si": true,
-    "t": "Vuelo incluido"
-   },
-   {
-    "si": true,
-    "t": "Incluye seguro de viaje"
-   }
-  ],
-  "fotosOriginales": [
-   "Vista panorámica de las Cataratas del Iguazú rodeadas de selva",
-   "Cataratas del Iguazú bajo un cielo azul",
-   "Saltos de las Cataratas del Iguazú entre la selva, con un mirador al fondo"
-  ],
-  "descripcion": "Cuatro días y tres noches en Iguazú durante Semana Santa. Incluye vuelo ida y vuelta desde Buenos Aires con JetSMART, traslados, alojamiento con desayuno y excursión a las Cataratas Argentinas (sin ingreso al Parque Nacional).",
-  "datos": [
-   {
-    "k": "Duración",
-    "v": "4 días · 3 noches"
-   },
-   {
-    "k": "Salida cotizada",
-    "v": "25 mar 2027"
-   },
-   {
-    "k": "Vuelo",
-    "v": "Incluido (desde Buenos Aires)"
-   },
-   {
-    "k": "Seguro de viaje",
-    "v": "Incluido"
-   },
-   {
-    "k": "Ocupación",
-    "v": "Base doble (cotización para 2 adultos)"
-   }
-  ],
-  "actividades": [],
-  "incluye": [
-   "Vuelo ida y vuelta desde Buenos Aires con JetSMART (incluye bolso de mano y carry on de 10 kg en cabina)",
-   "Traslados de entrada y salida",
-   "3 noches de alojamiento con desayuno",
-   "Excursión a las Cataratas Argentinas (sin ingreso al Parque Nacional)",
-   "Asistencia al viajero Universal Assistance, hasta los 70 años"
-  ],
-  "noIncluye": [
-   "Ingreso al Parque Nacional Iguazú",
-   "Ecotasa municipal de los hoteles de Iguazú",
-   "Almuerzos y cenas: no incluidos"
-  ],
-  "itinerario": [],
-  "itinerarioNota": "Este paquete no tiene un programa día por día: incluye el vuelo, los traslados, 3 noches de alojamiento con desayuno y excursión a las Cataratas Argentinas (sin ingreso al Parque Nacional). El resto de las actividades en destino son libres.",
-  "precio": "Desde USD 642",
-  "precioModo": [
-   "Precio por persona, en base doble (cotización para 2 adultos), en dólares estadounidenses. Salida cotizada: 25 mar 2027.",
-   "Vigencia de la tarifa: válida para la salida del 25 al 28 de marzo de 2027. El precio puede cambiar hasta confirmar la reserva."
-  ],
-  "precioImpuestos": [
-   "Complejo Turístico Americano (3★, hab. Superior): USD 655 por persona, base doble",
-   "Pirayú (3★, hab. Studio Junior): USD 642 por persona, base doble",
-   "Village Cataratas (4★, hab. Standard): USD 749 por persona, base doble"
-  ],
-  "precioAviso": "No es un total final: consultanos el valor con impuestos antes de reservar.",
-  "wa": "https://wa.me/5492214406602?text=Hola%2C%20quiero%20consultar%20por%20el%20paquete%20Iguaz%C3%BA%20en%20Semana%20Santa%20%28desde%20USD%20642%2C%20salida%2025%20mar%202027%29.",
-  "notas": [
-   "Salida única del 25 al 28 de marzo de 2027, con cupos confirmados y limitados, sujetos a disponibilidad al reservar.",
-   "Vuelos previstos: ida 25 de marzo, Ezeiza – Iguazú, 07:30 a 09:23; vuelta 28 de marzo, Iguazú – Aeroparque, 13:21 a 15:22",
-   "Las tarifas se calcularon para un grupo de 10 personas; las visitas y excursiones son servicios regulares compartidos.",
-   "La asistencia al viajero (Universal Assistance, plan National Plus) es válida hasta los 70 años. Para mayores hay un suplemento: consultanos.",
-   "La tarifa puede variar si cambia el tipo de cambio.",
-   "Los hoteles de Iguazú cobran una ecotasa municipal que no está incluida en la tarifa.",
-   "Las fotos son ilustrativas de las Cataratas del Iguazú: no todos los sectores que se ven están incluidos en la excursión."
+   "Cotización para 2 adultos, con ingreso el 15 de junio y salida el 21 de junio de 2027.",
+   "Válido solo para viajar en el mes cotizado (junio de 2027) o con salida un día antes de la fecha cotizada.",
+   "Los días sin actividades son días libres.",
+   "Las actividades al aire libre dependen del clima: en invierno las condiciones pueden cambiar.",
+   "Los horarios los confirma cada proveedor.",
+   "Las fotos son ilustrativas."
   ],
   "condiciones": "Precio sujeto a disponibilidad y a la fecha de salida indicada. Las condiciones de reserva, pago, cambios y cancelación están en los términos y condiciones . Antes de pagar te enviamos el detalle completo de tu viaje."
  },
@@ -374,8 +612,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "maravillas-de-croacia",
   "seccion": "argentina-croacia",
   "destacado": true,
+  "vence": "2027-04-27",
   "etiqueta": "Croacia",
-  "mini": "No incluye percepciones impositivas · salida 30 abr 2027",
+  "mini": "Salida 30 abr 2027",
   "titulo": "Maravillas de Croacia",
   "dest": "Destino: Croacia · 8 días · 7 noches",
   "badges": [
@@ -485,8 +724,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "descubra-croacia",
   "seccion": "argentina-croacia",
   "destacado": true,
+  "vence": "2027-06-17",
   "etiqueta": "Croacia",
-  "mini": "No incluye percepciones impositivas · salida 20 jun 2027",
+  "mini": "Salida 20 jun 2027",
   "titulo": "Descubra Croacia",
   "dest": "Destino: Croacia · 13 días · 12 noches",
   "badges": [
@@ -614,8 +854,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "capitales-de-los-balcanes-con-dubrovnik-y-zagreb",
   "seccion": "argentina-croacia",
   "destacado": false,
+  "vence": "2027-06-08",
   "etiqueta": "Balcanes",
-  "mini": "No incluye percepciones impositivas · salida 11 jun 2027",
+  "mini": "Salida 11 jun 2027",
   "titulo": "Capitales de los Balcanes con Dubrovnik y Zagreb",
   "dest": "Destino: Balcanes · 9 días · 8 noches",
   "badges": [
@@ -728,8 +969,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "lo-mejor-de-croacia-eslovenia-y-bosnia",
   "seccion": "argentina-croacia",
   "destacado": false,
+  "vence": "2027-06-01",
   "etiqueta": "Croacia",
-  "mini": "No incluye percepciones impositivas · salida 4 jun 2027",
+  "mini": "Salida 4 jun 2027",
   "titulo": "Lo Mejor de Croacia, Eslovenia y Bosnia",
   "dest": "Destino: Croacia · 10 días · 9 noches",
   "badges": [
@@ -847,8 +1089,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "perlas-balcanicas",
   "seccion": "argentina-croacia",
   "destacado": false,
+  "vence": "2027-04-10",
   "etiqueta": "Balcanes",
-  "mini": "No incluye percepciones impositivas · salida 13 abr 2027",
+  "mini": "Salida 13 abr 2027",
   "titulo": "Perlas Balcánicas",
   "dest": "Destino: Balcanes · 11 días · 10 noches",
   "badges": [
@@ -967,8 +1210,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "conozca-italia-y-croacia",
   "seccion": "argentina-croacia",
   "destacado": false,
+  "vence": "2027-04-23",
   "etiqueta": "Croacia e Italia",
-  "mini": "No incluye percepciones impositivas · salida 26 abr 2027",
+  "mini": "Salida 26 abr 2027",
   "titulo": "Conozca Italia y Croacia",
   "dest": "Destino: Croacia e Italia · 12 días · 11 noches",
   "badges": [
@@ -1095,8 +1339,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "maceio-pratagy-all-inclusive",
   "seccion": "otros",
   "destacado": true,
+  "vence": "2027-02-11",
   "etiqueta": "Maceió",
-  "mini": "No incluye percepciones impositivas · salida 14 feb 2027",
+  "mini": "Salida 14 feb 2027",
   "titulo": "Maceió, Pratagy All Inclusive",
   "dest": "Destino: Maceió · 8 días · 7 noches",
   "badges": [
@@ -1170,8 +1415,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "europa-contigo",
   "seccion": "otros",
   "destacado": true,
+  "vence": "2027-11-05",
   "etiqueta": "Francia, Suiza e Italia",
-  "mini": "No incluye percepciones impositivas · salida 8 nov 2027",
+  "mini": "Salida 8 nov 2027",
   "titulo": "Europa Contigo",
   "dest": "Destino: Francia, Suiza e Italia · 8 días · 7 noches",
   "badges": [
@@ -1290,8 +1536,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "italia-clasica-roma-florencia-y-venecia",
   "seccion": "otros",
   "destacado": true,
+  "vence": "2027-01-29",
   "etiqueta": "Italia",
-  "mini": "No incluye percepciones impositivas · salida 1 feb 2027",
+  "mini": "Salida 1 feb 2027",
   "titulo": "Italia Clásica: Roma, Florencia y Venecia",
   "dest": "Destino: Italia · 8 días · 7 noches",
   "badges": [
@@ -1409,8 +1656,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "leyendas-del-rey-arturo",
   "seccion": "otros",
   "destacado": true,
+  "vence": "2027-06-24",
   "etiqueta": "Reino Unido",
-  "mini": "No incluye percepciones impositivas · salida 27 jun 2027",
+  "mini": "Salida 27 jun 2027",
   "titulo": "Leyendas del Rey Arturo",
   "dest": "Destino: Reino Unido · 8 días · 7 noches",
   "badges": [
@@ -1532,8 +1780,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "rio-de-janeiro-express",
   "seccion": "otros",
   "destacado": false,
+  "vence": "2027-03-07",
   "etiqueta": "Río",
-  "mini": "No incluye percepciones impositivas · salida 10 mar 2027",
+  "mini": "Salida 10 mar 2027",
   "titulo": "Río de Janeiro Express",
   "dest": "Destino: Río · 4 días · 3 noches",
   "badges": [
@@ -1611,8 +1860,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "barcelona-costa-azul-y-roma",
   "seccion": "otros",
   "destacado": false,
+  "vence": "2027-11-05",
   "etiqueta": "España, Francia e Italia",
-  "mini": "No incluye percepciones impositivas · salida 8 nov 2027",
+  "mini": "Salida 8 nov 2027",
   "titulo": "Barcelona, Costa Azul y Roma",
   "dest": "Destino: España, Francia e Italia · 8 días · 7 noches",
   "badges": [
@@ -1729,8 +1979,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "madrid-lourdes-y-paris",
   "seccion": "otros",
   "destacado": false,
+  "vence": "2027-11-03",
   "etiqueta": "España y Francia",
-  "mini": "No incluye percepciones impositivas · salida 6 nov 2027",
+  "mini": "Salida 6 nov 2027",
   "titulo": "Madrid, Lourdes y París",
   "dest": "Destino: España y Francia · 8 días · 7 noches",
   "badges": [
@@ -1848,8 +2099,9 @@ window.KRAVATA_PAQUETES = [
   "slug": "madrid-y-londres",
   "seccion": "otros",
   "destacado": false,
+  "vence": "2027-10-31",
   "etiqueta": "España, Francia y Reino Unido",
-  "mini": "No incluye percepciones impositivas · salida 3 nov 2027",
+  "mini": "Salida 3 nov 2027",
   "titulo": "Madrid y Londres",
   "dest": "Destino: España, Francia y Reino Unido · 8 días · 7 noches",
   "badges": [
