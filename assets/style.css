@@ -644,6 +644,14 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; }
 [data-ilumina] .palabra { color: rgba(18,35,61,.28); transition: color .35s var(--curva); }
 [data-ilumina] .palabra.encendida { color: var(--adriatico); }
 
+/* campo de salida fija (Semana Santa): se lee, no se elige */
+.sel--fija { cursor: default; }
+.sel--fija .sel__valor { font-size: 17px; font-weight: 500; white-space: normal; }
+.sel__fija-nota { font-size: 12px; color: var(--tinta-2); }
+.buscador .sel--fija .sel__fija-nota { color: rgba(243,237,225,.75); }
+.sel__opcion small:empty { display: none; }
+.caja-precio__otro { display: inline-flex; margin-top: 12px; font-size: 15px; }
+
 /* solo en la copia publicada para mostrar: aviso de versión de prueba */
 .aviso-prueba { position: fixed; left: 12px; bottom: 12px; z-index: 70; margin: 0; padding: 7px 12px; border-radius: 999px; background: rgba(18,35,61,.88); color: var(--crema); font-size: 12px; font-weight: 600; pointer-events: none; }
 @media (max-width: 920px) { .aviso-prueba { bottom: auto; top: 70px; left: 50%; translate: -50% 0; white-space: nowrap; } }

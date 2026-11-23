@@ -343,6 +343,39 @@
     ...K.regiones.map(r => ({ grupo: r.nombre, items: r.slugs.filter(s => porSlug[s]).map(s => ({ valor: porSlug[s].titulo, texto: porSlug[s].titulo, nota: 'USD ' + precioNum(porSlug[s]) })) })),
     { grupo: 'Otro', items: [{ valor: 'Otro destino, a medida', texto: 'Otro destino, a medida' }] }
   ];
+  // fechas posibles de un paquete, según su vigencia: fija (Semana Santa), lista de salidas (Patagonia) o rango de meses
+  const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  const may = s => s[0].toUpperCase() + s.slice(1);
+  const fechasDe = p => {
+    const v = (p.precioModo.find(t => /vigencia/i.test(t)) || '');
+    let m = v.match(/la salida del (\d+) al (\d+) de (\w+) de (\d{4})/);
+    if (m) {
+      const ss = /semana santa/i.test(p.titulo), fecha = `${m[1]} al ${m[2]} de ${m[3]} de ${m[4]}`;
+      return { tipo: 'fija', texto: (ss ? 'Semana Santa: ' : '') + fecha, valor: fecha + (ss ? ' (Semana Santa)' : '') };
+    }
+    m = v.match(/las salidas del (.+?) de (\d{4})/);
+    if (m) {
+      const items = m[1].split(/, | y /).map(x => ({ valor: `${x} de ${m[2]}`, texto: may(x) }));
+      return { tipo: 'lista', opciones: [{ grupo: `Salidas ${m[2]}`, items }], porDefecto: items[0].valor };
+    }
+    m = v.match(/desde (\w+) (\d{4}) hasta (\w+) (\d{4})/);
+    if (m) {
+      const hoy = new Date(), sig = new Date(hoy.getFullYear(), hoy.getMonth() + 1, 1);
+      let d = new Date(+m[2], MESES.indexOf(m[1]), 1); if (d < sig) d = sig;
+      const fin = new Date(+m[4], MESES.indexOf(m[3]), 1);
+      const cot = (p.datos.find(x => /salida/i.test(x.k)) || {}).v || '';     // «10 mar 2027»
+      const grupos = [];
+      for (; d <= fin; d = new Date(d.getFullYear(), d.getMonth() + 1, 1)) {
+        const anio = String(d.getFullYear()), mes = MESES[d.getMonth()];
+        let g = grupos.find(x => x.grupo === anio); if (!g) grupos.push(g = { grupo: anio, items: [] });
+        const esCot = cot && cot.includes(mes.slice(0, 3)) && cot.endsWith(anio);
+        g.items.push({ valor: `${mes} de ${anio}`, texto: may(mes), nota: esCot ? 'salida cotizada' : '' });
+      }
+      grupos.push({ grupo: '', items: [{ valor: 'Otra fecha, a consultar', texto: 'Otra fecha, a consultar' }] });
+      return { tipo: 'rango', opciones: grupos };
+    }
+    return null;
+  };
   const opcionesCuando = () => {
     const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
     const hoy = new Date();
@@ -370,8 +403,24 @@
          <button class="btn" type="submit">${I.wa}Enviar por WhatsApp</button>
          <p class="form-pres__nota">Se abre WhatsApp con tu mensaje listo. No guardamos tus datos en la web.</p>`;
     const pre = new URLSearchParams(location.search).get('destino') || '';
-    selector(form.querySelector('[data-campo=destino]'), { name: 'destino', etiqueta: 'Destino', vacio: 'Elegí un destino', opciones: opcionesDestino(), valor: pre });
-    selector(form.querySelector('[data-campo=fecha]'), { name: 'fecha', etiqueta: 'Cuándo', vacio: 'Elegí un mes', opciones: opcionesCuando() });
+    const hostFecha = form.querySelector('[data-campo=fecha]');
+    const pintarCuando = destino => {
+      cerrarAbierto(false);
+      const p = PAQ.find(x => x.titulo === destino), f = p ? fechasDe(p) : null;
+      hostFecha.className = '';
+      if (f && f.tipo === 'fija') {
+        // fecha fija: no hay nada que elegir, se muestra y viaja en el mensaje
+        hostFecha.classList.add('fld', 'sel', 'sel--fija');
+        hostFecha.innerHTML = `<span class="fld__etiqueta">Salida</span><span class="sel__valor">${esc(f.texto)}</span><input type="hidden" name="fecha" value="${esc(f.valor)}"><span class="sel__fija-nota">Fecha fija del paquete</span>`;
+        return;
+      }
+      selector(hostFecha, f
+        ? { name: 'fecha', etiqueta: 'Salida', vacio: f.tipo === 'lista' ? 'Elegí una salida' : 'Elegí un mes', opciones: f.opciones, valor: f.porDefecto || '' }
+        : { name: 'fecha', etiqueta: 'Cuándo', vacio: 'Elegí un mes', opciones: opcionesCuando() });
+    };
+    selector(form.querySelector('[data-campo=destino]'), { name: 'destino', etiqueta: 'Destino', vacio: 'Elegí un destino', opciones: opcionesDestino(), valor: pre,
+      alCambiar: v => { pintarCuando(v); const b = hostFecha.querySelector('.sel__boton'); if (b) b.focus({ preventScroll: true }); } });
+    pintarCuando(pre);
     selectorPersonas(form.querySelector('[data-campo=personas]'), { name: 'personas', etiqueta: 'Personas' });
     const estado = document.createElement('p');
     estado.className = 'form-estado'; estado.setAttribute('role', 'status'); estado.setAttribute('aria-live', 'polite');
@@ -392,8 +441,9 @@
       campoDestino.classList.remove('fld--error'); campoDestino.querySelector('.sel__boton').removeAttribute('aria-invalid');
       const lineas = [rapido ? 'Hola, quiero consultar por un viaje.' : 'Hola, quiero pedir un presupuesto.'];
       if (d.nombre) lineas.push(`Soy ${d.nombre}.`);
-      if (d.destino) lineas.push(`Destino: ${d.destino}.`);
-      if (d.fecha) lineas.push(`Cuándo: ${d.fecha}.`);
+      const pq = PAQ.find(x => x.titulo === d.destino);
+      if (d.destino) lineas.push(pq ? `Paquete: ${pq.titulo} (desde USD ${precioNum(pq)} por persona, base doble).` : `Destino: ${d.destino}.`);
+      if (d.fecha) lineas.push(`${pq ? 'Salida' : 'Cuándo'}: ${d.fecha}.`);
       if (d.personas) lineas.push(`Personas: ${d.personas}.`);
       if (d.mas) lineas.push(d.mas);
       window.open(wa(lineas.join('\n')), '_blank', 'noopener');
@@ -622,6 +672,7 @@
           <p class="caja-precio__modo">Por persona, en base doble. Salida cotizada: ${esc(salida)}.</p>
           <div class="aviso">${I.info}<span>${esc(p.precioAviso || 'No es un total final: consultanos el valor con impuestos antes de reservar.')}</span></div>
           <a class="btn btn--ancho" href="${wa(waTexto)}" target="_blank" rel="noopener">${I.wa}Consultar por WhatsApp</a>
+          <a class="link caja-precio__otro" href="presupuesto.html?destino=${encodeURIComponent(p.titulo)}#form-presupuesto">Elegir salida y personas</a>
           <div class="caja-precio__firma"><span class="sello-chico">${svgRombo}</span><span><b>Te respondo yo.</b> Antes de pagar te mando el detalle completo: qué incluye, qué no y cuánto sale de verdad.</span></div>
           <div class="caja-precio__letra">${p.precioModo.slice(1).map(t => `<p>${esc(t)}</p>`).join('')}${p.precioImpuestos.map(t => `<p>${esc(t)}</p>`).join('')}</div>
         </aside>`;
